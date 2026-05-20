@@ -116,3 +116,10 @@ filterCategory.addEventListener("change", function(){
 })
 
 
+function saveExpenses(){
+  localStorage.setItem(
+    "expenses",
+    JSON.stringify(expenses)
+  )
+}
+
