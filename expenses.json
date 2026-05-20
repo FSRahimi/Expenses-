@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Groceries",
+        "amount": 50,
+        "category": "Food"
+    },
+    {
+        "id": 2,
+        "title": "Internet Bill",
+        "amount": 80,
+        "category": "Bills"
+    },
+    {
+        "id": 3,
+        "title": "Taxi",
+        "amount": 20,
+        "category": "Transport"
+    }
+]

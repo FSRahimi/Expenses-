@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 min-h-screen">
+
+    <div class="max-w-6xl mx-auto p-8">
+
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-10 flex-wrap gap-4">
+            <div>
+                <h1 class="text-4xl font-bold text-white">
+                    Expense Tracker
+                </h1>
+                <p class="text-slate-300 mt-2">
+                    Track your spending professionally
+                </p>
+            </div>
+
+            <div class="summary-box">
+                <h2>Total Balance</h2>
+                <p id="totalAmount">$0</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-container mb-10">
+
+            <input 
+                id="title"
+                type="text"
+                placeholder="Expense Title"
+                class="custom-input"
+            >
+
+            <input
+                id="amount"
+                type="number"
+                placeholder="Amount"
+                class="custom-input"
+            >
+
+            <select id="category" class="custom-input">
+                <option>Food</option>
+                <option>Shopping</option>
+                <option>Transport</option>
+                <option>Bills</option>
+            </select>
+
+            <button id="addBtn" class="add-btn">
+                Add Expense
+            </button>
+        </div>
+
+        <!-- Filter -->
+        <div class="mb-6">
+            <select id="filterCategory" class="custom-input w-64">
+                <option value="All">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+            </select>
+        </div>
+
+        <!-- Expense List -->
+        <div id="expenseList" class="grid md:grid-cols-3 gap-6">
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
