@@ -90,36 +90,27 @@ function displayExpenses(data) {
   document.getElementById("totalAmount").innerText = `$${total}`;
 }
 
-function deleteExpense(id){
-  expenses = expenses.filter(
-    expense => expense.id !== id
-  );
+function deleteExpense(id) {
+  expenses = expenses.filter((expense) => expense.id !== id);
 
   saveExpenses();
-  displayExpenses(expenses)
+  displayExpenses(expenses);
 }
 
+filterCategory.addEventListener("change", function () {
+  const selected = this.value;
 
-filterCategory.addEventListener("change", function(){
-     const selected = this.value;
+  if (selected === "All") {
+    displayExpenses(expenses);
+  } else {
+    const filterExpenses = expenses.filter(
+      (expense) => expense.category === selected
+    );
 
-     if(selected === "All"){
-      displayExpenses(expenses)
-     }else{
-      const filterExpenses = expenses.filter(
-        expense => expense.category === selected
+    displayExpenses(filterExpenses);
+  }
+});
 
-      );
-
-      displayExpenses(filterExpenses);
-     }
-})
-
-
-function saveExpenses(){
-  localStorage.setItem(
-    "expenses",
-    JSON.stringify(expenses)
-  )
+function saveExpenses() {
+  localStorage.setItem("expenses", JSON.stringify(expenses));
 }
- 
