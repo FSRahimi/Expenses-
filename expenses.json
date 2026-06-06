@@ -16,5 +16,13 @@
         "title": "Taxi",
         "amount": 20,
         "category": "Transport"
+    },
+     {
+        "id": 4,
+        "title": "Bus Bill",
+        "amount": 5,
+        "category": "Transport"
     }
 ]
+
+
